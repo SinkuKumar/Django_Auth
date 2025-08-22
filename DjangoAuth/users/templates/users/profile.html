@@ -3,6 +3,11 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
+  <!-- Single-line Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="{% url 'home' %}">Home</a> / Profile
+  </div>
+
   {% if user.is_authenticated %}
     <h1>Welcome, {{ user.username }}!</h1>
     <ul>

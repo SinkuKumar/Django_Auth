@@ -3,8 +3,8 @@ from django.contrib.auth.views import LogoutView
 from . import views
 
 urlpatterns = [
-    path('', views.home),
-    path('profile/', views.profile),
+    path('', views.home, name='home'),
+    path('profile/', views.profile, name='profile'),
     path('login/', views.CustomLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
 ]
